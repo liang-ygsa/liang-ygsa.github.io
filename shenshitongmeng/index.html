@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>绅士同盟-绅士文化社区与兴趣交流指南</title>
+<meta name="description" content="绅士同盟是一个聚焦绅士文化与兴趣交流的主题社区，提供圈层概念解读、礼仪修养、兴趣版块导航、参与方式与常见问题解答，帮助新成员理解并融入绅士同盟的交流氛围。">
+<meta name="keywords" content="绅士同盟,绅士文化,兴趣社区,礼仪修养,圈层交流,绅士同盟指南">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root{
+  --ink:#1c1a22;
+  --ink-soft:#4a4655;
+  --paper:#f6f3ec;
+  --paper-2:#ffffff;
+  --gold:#b8935a;
+  --gold-deep:#8f6f3c;
+  --wine:#5c2b3a;
+  --line:rgba(28,26,34,.12);
+  --shadow:0 10px 30px rgba(28,26,34,.09);
+  --radius:14px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Songti SC","Noto Serif SC","Source Han Serif SC",Georgia,"Microsoft YaHei",serif;
+  line-height:1.75;
+  font-size:16px;
+}
+img{max-width:100%;}
+a{color:inherit;text-decoration:none;}
+ul{margin:0;padding:0;list-style:none;}
+h1,h2,h3{margin:0;line-height:1.35;font-weight:700;}
+p{margin:0 0 1em;}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px;}
+
+/* ---------- header ---------- */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(246,243,236,.92);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:18px;min-height:68px;
+}
+.brand{display:flex;align-items:center;gap:10px;}
+.brand-mark{
+  width:38px;height:38px;border-radius:10px;
+  background:linear-gradient(140deg,var(--wine),var(--gold-deep));
+  color:#fff;display:grid;place-items:center;
+  font-size:19px;font-weight:700;letter-spacing:1px;
+  box-shadow:var(--shadow);
+}
+.brand-text b{display:block;font-size:18px;letter-spacing:2px;}
+.brand-text span{display:block;font-size:11px;letter-spacing:3px;color:var(--ink-soft);}
+.main-nav{display:flex;gap:6px;flex-wrap:wrap;}
+.main-nav a{
+  padding:8px 13px;border-radius:999px;font-size:14px;
+  color:var(--ink-soft);transition:.2s;
+}
+.main-nav a:hover{background:rgba(184,147,90,.16);color:var(--ink);}
+.header-cta{
+  padding:9px 18px;border-radius:999px;font-size:14px;
+  background:var(--wine);color:#fff;white-space:nowrap;
+  transition:.2s;
+}
+.header-cta:hover{background:#431f2b;}
+
+/* ---------- hero ---------- */
+.hero{
+  padding:64px 0 54px;
+  background:
+    radial-gradient(circle at 12% 18%,rgba(184,147,90,.22),transparent 46%),
+    radial-gradient(circle at 88% 8%,rgba(92,43,58,.16),transparent 42%),
+    var(--paper);
+  border-bottom:1px solid var(--line);
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.35fr .9fr;gap:44px;align-items:center;
+}
+.hero-tag{
+  display:inline-block;font-size:12px;letter-spacing:4px;
+  color:var(--gold-deep);border:1px solid rgba(143,111,60,.4);
+  padding:5px 14px;border-radius:999px;margin-bottom:20px;
+}
+.hero h1{
+  font-size:clamp(30px,4.2vw,46px);letter-spacing:2px;margin-bottom:18px;
+}
+.hero h1 em{
+  font-style:normal;color:var(--wine);
+  border-bottom:3px solid rgba(184,147,90,.55);
+}
+.hero-lead{
+  font-size:17px;color:var(--ink-soft);max-width:620px;
+}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px;}
+.btn{
+  display:inline-block;padding:12px 26px;border-radius:999px;
+  font-size:15px;letter-spacing:1px;transition:.2s;border:1px solid transparent;
+}
+.btn-primary{background:var(--wine);color:#fff;}
+.btn-primary:hover{background:#431f2b;transform:translateY(-2px);}
+.btn-ghost{border-color:rgba(28,26,34,.25);color:var(--ink);}
+.btn-ghost:hover{border-color:var(--gold-deep);color:var(--gold-deep);}
+.hero-facts{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px;
+  max-width:560px;
+}
+.fact{
+  background:rgba(255,255,255,.72);border:1px solid var(--line);
+  border-radius:var(--radius);padding:14px 16px;
+}
+.fact b{display:block;font-size:19px;color:var(--wine);letter-spacing:1px;}
+.fact span{font-size:12.5px;color:var(--ink-soft);letter-spacing:.5px;}
+
+/* hero side card */
+.hero-card{
+  background:var(--paper-2);border:1px solid var(--line);
+  border-radius:20px;padding:26px;box-shadow:var(--shadow);
+}
+.hero-card h3{font-size:16px;letter-spacing:2px;margin-bottom:16px;color:var(--wine);}
+.hero-card ol{counter-reset:n;display:grid;gap:12px;}
+.hero-card ol li{
+  counter-increment:n;position:relative;padding-left:38px;
+  font-size:14.5px;color:var(--ink-soft);
+}
+.hero-card ol li::before{
+  content:counter(n,decimal-leading-zero);
+  position:absolute;left:0;top:1px;
+  font-size:13px;color:var(--gold-deep);font-weight:700;
+  border:1px solid rgba(143,111,60,.35);border-radius:8px;
+  width:26px;height:26px;display:grid;place-items:center;
+}
+
+/* ---------- section base ---------- */
+section{padding:58px 0;}
+.section-head{margin-bottom:30px;}
+.section-head .kicker{
+  font-size:12px;letter-spacing:4px;color:var(--gold-deep);
+  display:block;margin-bottom:10px;
+}
+.section-head h2{font-size:clamp(22px,2.6vw,30px);letter-spacing:1.5px;}
+.section-head p{color:var(--ink-soft);margin-top:12px;max-width:760px;font-size:15.5px;}
+
+/* ---------- concept ---------- */
+.concept{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.concept-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.concept-card{
+  border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;background:var(--paper);
+  transition:.25s;
+}
+.concept-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
+.concept-card .num{
+  font-size:13px;letter-spacing:2px;color:var(--gold-deep);font-weight:700;
+}
+.concept-card h3{font-size:17.5px;margin:10px 0 10px;letter-spacing:1px;}
+.concept-card p{font-size:14.5px;color:var(--ink-soft);margin:0;}
+
+/* ---------- boards ---------- */
+.boards-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.board{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;display:flex;flex-direction:column;gap:10px;
+  transition:.25s;
+}
+.board:hover{border-color:rgba(184,147,90,.6);box-shadow:var(--shadow);}
+.board .icon{
+  width:40px;height:40px;border-radius:11px;display:grid;place-items:center;
+  background:rgba(184,147,90,.16);color:var(--wine);font-size:18px;font-weight:700;
+}
+.board h3{font-size:16.5px;letter-spacing:1px;}
+.board p{font-size:14px;color:var(--ink-soft);margin:0;flex:1;}
+.board .meta{font-size:12.5px;color:var(--gold-deep);letter-spacing:1px;}
+
+/* ---------- etiquette ---------- */
+.etiquette{background:linear-gradient(180deg,rgba(92,43,58,.06),transparent 70%);}
+.etiquette-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:start;}
+.rule-list{display:grid;gap:16px;}
+.rule{
+  display:grid;grid-template-columns:52px 1fr;gap:16px;
+  background:var(--paper-2);border:1px solid var(--line);
+  border-radius:var(--radius);padding:18px 20px;
+}
+.rule .idx{
+  font-size:20px;font-weight:700;color:var(--gold-deep);
+  border-right:1px solid var(--line);padding-right:12px;
+}
+.rule h3{font-size:16px;margin-bottom:6px;letter-spacing:1px;}
+.rule p{font-size:14.3px;color:var(--ink-soft);margin:0;}
+.aside-box{
+  background:var(--wine);color:#f3e9dd;border-radius:20px;padding:28px;
+  box-shadow:var(--shadow);
+}
+.aside-box h3{font-size:18px;letter-spacing:2px;margin-bottom:14px;color:#fff;}
+.aside-box p{font-size:14.5px;color:rgba(243,233,221,.86);}
+.aside-box ul{display:grid;gap:10px;margin-top:16px;}
+.aside-box ul li{
+  font-size:14px;padding-left:18px;position:relative;color:rgba(243,233,221,.9);
+}
+.aside-box ul li::before{
+  content:"";position:absolute;left:0;top:9px;
+  width:6px;height:6px;border-radius:50%;background:var(--gold);
+}
+
+/* ---------- topics ---------- */
+.topics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.topic{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;display:flex;flex-direction:column;gap:12px;
+}
+.topic .pill{
+  align-self:flex-start;font-size:12px;letter-spacing:1.5px;
+  padding:3px 11px;border-radius:999px;
+  background:rgba(92,43,58,.1);color:var(--wine);
+}
+.topic h3{font-size:16.5px;letter-spacing:.5px;}
+.topic p{font-size:14.3px;color:var(--ink-soft);margin:0;}
+.topic .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;}
+.topic .tags span{
+  font-size:12.5px;color:var(--gold-deep);
+  border:1px dashed rgba(143,111,60,.45);border-radius:999px;padding:2px 10px;
+}
+
+/* ---------- join steps ---------- */
+.join{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s;}
+.step{
+  position:relative;padding:26px 22px 22px;
+  border:1px solid var(--line);border-radius:var(--radius);background:var(--paper);
+}
+.step::before{
+  counter-increment:s;content:"STEP " counter(s);
+  position:absolute;top:-11px;left:22px;
+  background:var(--gold-deep);color:#fff;font-size:11px;letter-spacing:2px;
+  padding:3px 10px;border-radius:999px;
+}
+.step h3{font-size:16px;margin:8px 0 8px;letter-spacing:1px;}
+.step p{font-size:14.2px;color:var(--ink-soft);margin:0;}
+
+/* ---------- faq ---------- */
+.faq-list{display:grid;gap:12px;}
+.faq-item{
+  background:var(--paper-2);border:1px solid var(--line);
+  border-radius:var(--radius);overflow:hidden;
+}
+.faq-item summary{
+  cursor:pointer;padding:18px 22px;font-size:16px;font-weight:700;
+  letter-spacing:.5px;list-style:none;display:flex;justify-content:space-between;
+  gap:16px;align-items:center;
+}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{
+  content:"+";font-size:20px;color:var(--gold-deep);font-weight:400;
+  transition:.2s;
+}
+.faq-item[open] summary::after{content:"–";}
+.faq-item .answer{
+  padding:0 22px 20px;font-size:14.6px;color:var(--ink-soft);
+  border-top:1px solid var(--line);padding-top:16px;
+}
+
+/* ---------- footer ---------- */
+.site-footer{
+  background:#221d26;color:rgba(246,243,236,.78);
+  padding:52px 0 26px;font-size:14px;
+}
+.footer-grid{
+  display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px;
+}
+.site-footer h3{
+  font-size:15px;color:#fff;letter-spacing:2px;margin-bottom:14px;
+}
+.site-footer p{color:rgba(246,243,236,.6);font-size:13.6px;}
+.site-footer ul{display:grid;gap:9px;}
+.site-footer ul a{color:rgba(246,243,236,.72);font-size:13.6px;}
+.site-footer ul a:hover{color:var(--gold);}
+.footer-bottom{
+  margin-top:36px;padding-top:20px;border-top:1px solid rgba(246,243,236,.14);
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  font-size:12.8px;color:rgba(246,243,236,.5);
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:1000px){
+  .hero-grid{grid-template-columns:1fr;}
+  .concept-grid{grid-template-columns:repeat(2,1fr);}
+  .boards-grid{grid-template-columns:repeat(2,1fr);}
+  .etiquette-layout{grid-template-columns:1fr;}
+  .topics-grid{grid-template-columns:repeat(2,1fr);}
+  .steps{grid-template-columns:repeat(2,1fr);}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:640px){
+  body{font-size:15.4px;}
+  .header-inner{flex-wrap:wrap;padding:12px 0;gap:12px;}
+  .main-nav{order:3;width:100%;overflow-x:auto;padding-bottom:4px;}
+  .main-nav a{white-space:nowrap;}
+  .hero{padding:44px 0 40px;}
+  .hero-facts{grid-template-columns:1fr;}
+  .concept-grid,.boards-grid,.topics-grid,.steps{grid-template-columns:1fr;}
+  .rule{grid-template-columns:1fr;}
+  .rule .idx{border-right:none;border-bottom:1px solid var(--line);padding:0 0 8px;}
+  .footer-grid{grid-template-columns:1fr;}
+  section{padding:44px 0;}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark">绅</span>
+      <span class="brand-text">
+        <b>绅士同盟</b>
+        <span>GENTLEMEN LEAGUE</span>
+      </span>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <a href="#concept">概念解读</a>
+      <a href="#boards">版块导航</a>
+      <a href="#etiquette">礼仪公约</a>
+      <a href="#topics">话题广场</a>
+      <a href="#join">加入方式</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <a class="header-cta" href="#join">了解加入流程</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="hero-tag">兴趣 · 修养 · 交流</span>
+        <h1>绅士同盟：一个讲究<em>分寸与修养</em>的兴趣交流社区</h1>
+        <p class="hero-lead">
+          如果你第一次听到“绅士同盟”，最想知道的大概是：它到底是什么、聊什么内容、怎样参与才合适。
+          简单说，绅士同盟是以礼仪修养、审美品味与兴趣分享为核心的交流圈层，强调尊重他人、理性表达与自我约束。
+          本页从概念、版块、公约到参与流程，为你梳理一份清晰的入门参考。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#concept">先看概念解读</a>
+          <a class="btn btn-ghost" href="#join">查看参与步骤</a>
+        </div>
+        <div class="hero-facts">
+          <div class="fact"><b>修养为先</b><span>交流以尊重为底线</span></div>
+          <div class="fact"><b>兴趣为核</b><span>围绕共同爱好展开</span></div>
+          <div class="fact"><b>理性表达</b><span>观点分歧不针对人</span></div>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <h3>新成员入门四件事</h3>
+        <ol>
+          <li>先读一遍社区公约，明确哪些话题与表达方式不适合公开讨论。</li>
+          <li>选择一到两个真正感兴趣的方向，避免盲目发帖刷存在感。</li>
+          <li>发言前先检索已有讨论，减少重复内容，方便他人阅读。</li>
+          <li>遇到分歧时先沟通语境，再表达观点，保持基本礼貌。</li>
+        </ol>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 概念解读 -->
+  <section class="concept" id="concept">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">CONCEPT</span>
+        <h2>“绅士同盟”到底指什么</h2>
+        <p>
+          “绅士同盟”并不是一个带有统一官方定义的机构名称，它在不同语境下被用来指代以绅士风度、礼仪修养和兴趣分享为纽带的交流群体。
+          理解这个词，关键不在于某个固定组织，而在于它所倡导的交流方式与价值取向。
+        </p>
+      </div>
+      <div class="concept-grid">
+        <article class="concept-card">
+          <span class="num">01</span>
+          <h3>一种交流氛围</h3>
+          <p>
+            强调克制、得体与换位思考。讨论再热烈，也不用人身攻击、嘲讽或情绪化表达来压倒对方，
+            把“说清楚”放在“说过瘾”之前。
+          </p>
+        </article>
+        <article class="concept-card">
+          <span class="num">02</span>
+          <h3>一类兴趣圈层</h3>
+          <p>
+            成员通常因共同的审美偏好、生活方式或文化兴趣聚集，例如穿搭礼仪、影视动漫、器物收藏、
+            阅读写作等，话题围绕兴趣自然延展。
+          </p>
+        </article>
+        <article class="concept-card">
+          <span class="num">03</span>
+          <h3>一套自我约束</h3>
+          <p>
+            绅士精神更多指向自我要求：守时、守信、不打扰他人、不把个人偏好强加给别人。
+            这些规则不靠外部强制，而靠成员自觉遵守。
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 版块导航 -->
+  <section id="boards">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">BOARDS</span>
+        <h2>常见版块与内容方向</h2>
+        <p>
+          一个成熟的兴趣社区通常按话题划分版块，方便成员快速找到同好。以下方向在绅士同盟类社区中较为常见，
+          具体版块设置会因平台定位而有所不同，可作为浏览与参与的参考。
+        </p>
+      </div>
+      <div class="boards-grid">
+        <article class="board">
+          <span class="icon">礼</span>
+          <h3>礼仪与修养</h3>
+          <p>日常社交礼仪、餐桌与着装规范、沟通分寸、公共场合行为等话题的讨论与经验分享。</p>
+          <span class="meta">适合新成员优先浏览</span>
+        </article>
+        <article class="board">
+          <span class="icon">品</span>
+          <h3>审美与穿搭</h3>
+          <p>风格搭配、色彩基础、场合着装选择，以及如何在不铺张的前提下建立个人形象。</p>
+          <span class="meta">偏实用经验交流</span>
+        </article>
+        <article class="board">
+          <span class="icon">阅</span>
+          <h3>阅读与写作</h3>
+          <p>书单交流、读书笔记、影评与随笔写作，鼓励有理有据的长文表达而非情绪化短评。</p>
+          <span class="meta">鼓励原创长内容</span>
+        </article>
+        <article class="board">
+          <span class="icon">趣</span>
+          <h3>兴趣与收藏</h3>
+          <p>器物、文具、影像、音乐等兴趣方向的分享，重点在于交流心得而非攀比价格。</p>
+          <span class="meta">理性分享不炫耀</span>
+        </article>
+        <article class="board">
+          <span class="icon">谈</span>
+          <h3>话题讨论</h3>
+          <p>围绕社会话题、文化现象的理性讨论区，要求观点有依据、表达有边界。</p>
+          <span class="meta">重逻辑轻情绪</span>
+        </article>
+        <article class="board">
+          <span class="icon">新</span>
+          <h3>新人报到</h3>
+          <p>新成员自我介绍、提问与求助的入口，老成员通常会在此提供引导与建议。</p>
+          <span class="meta">建议先看置顶说明</span>
+        </article>
+        <article class="board">
+          <span class="icon">务</span>
+          <h3>站务与反馈</h3>
+          <p>规则说明、意见反馈、举报处理等事务性内容，保障社区秩序与信息透明。</p>
+          <span class="meta">规则问题看这里</span>
+        </article>
+        <article class="board">
+          <span class="icon">线</span>
+          <h3>线下活动</h3>
+          <p>讲座、观展、读书会等线下交流信息，参与时需注意人身安全与信息核实。</p>
+          <span class="meta">注意甄别活动信息</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 礼仪公约 -->
+  <section class="etiquette" id="etiquette">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">ETIQUETTE</span>
+        <h2>交流公约：让讨论保持体面</h2>
+        <p>
+          任何以“绅士”为名的社区，最终都要落到具体行为上。以下几条是多数同类社区共同认可的基本准则，
+          也是判断一个讨论氛围是否健康的重要参考。
+        </p>
+      </div>
+      <div class="etiquette-layout">
+        <div class="rule-list">
+          <article class="rule">
+            <span class="idx">一</span>
+            <div>
+              <h3>对事不对人</h3>
+              <p>可以反驳观点，但不攻击表达者本身。指出问题时说明具体依据，而不是用标签和嘲讽代替论证。</p>
+            </div>
+          </article>
+          <article class="rule">
+            <span class="idx">二</span>
+            <div>
+              <h3>不打扰他人</h3>
+              <p>不刷屏、不私信骚扰、不在无关话题下强行引流。尊重他人选择不回复、不参与的权利。</p>
+            </div>
+          </article>
+          <article class="rule">
+            <span class="idx">三</span>
+            <div>
+              <h3>尊重隐私与版权</h3>
+              <p>未经允许不公开他人信息，转载内容注明来源，不传播侵权资源与来源不明的文件。</p>
+            </div>
+          </article>
+          <article class="rule">
+            <span class="idx">四</span>
+            <div>
+              <h3>保持内容真实</h3>
+              <p>分享经验时避免夸大与编造，涉及健康、法律、财务等专业问题时，建议注明信息仅供参考。</p>
+            </div>
+          </article>
+          <article class="rule">
+            <span class="idx">五</span>
+            <div>
+              <h3>接受合理分歧</h3>
+              <p>兴趣与审美本就多元，允许不同看法存在。讨论可以结束，但不必强求对方认同。</p>
+            </div>
+          </article>
+        </div>
+        <aside class="aside-box">
+          <h3>参与前请留意</h3>
+          <p>网络社区的信息需要自行判断，以下提醒适用于大多数兴趣交流场景：</p>
+          <ul>
+            <li>不轻易向陌生人转账或提供证件、住址等敏感信息。</li>
+            <li>对“付费入群”“内部资源”“限时名额”等话术保持警惕。</li>
+            <li>线下活动尽量选择公开场所，并告知亲友行程。</li>
+            <li>涉及专业建议时，以正规渠道与专业人士意见为准。</li>
+            <li>发现违规内容可通过站务版块反馈，不自行扩散。</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 话题广场 -->
+  <section id="topics">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">TOPICS</span>
+        <h2>话题广场：可以从哪里聊起</h2>
+        <p>
+          新成员常常不知道第一句话该说什么。下面这些话题方向门槛适中、容易展开，也便于他人参与讨论，
+          可以作为发帖或回帖的起点。
+        </p>
+      </div>
+      <div class="topics-grid">
+        <article class="topic">
+          <span class="pill">入门话题</span>
+          <h3>第一次参加正式场合该怎么穿</h3>
+          <p>从场合性质、邀请说明、天气与个人舒适度出发，讨论如何在得体与自然之间找到平衡。</p>
+          <div class="tags"><span>着装</span><span>场合</span><span>新手</span></div>
+        </article>
+        <article class="topic">
+          <span class="pill">经验分享</span>
+          <h3>如何把一次争论聊得不伤和气</h3>
+          <p>交流技巧类话题，涉及倾听、复述对方观点、控制语气与适时结束讨论等具体做法。</p>
+          <div class="tags"><span>沟通</span><span>分寸</span><span>经验</span></div>
+        </article>
+        <article class="topic">
+          <span class="pill">兴趣交流</span>
+          <h3>值得反复翻看的书与影像</h3>
+          <p>分享对自己有影响的作品，并说明具体原因，比单纯列书单更容易引发有价值的讨论。</p>
+          <div class="tags"><span>阅读</span><span>影像</span><span>推荐</span></div>
+        </article>
+        <article class="topic">
+          <span class="pill">生活细节</span>
+          <h3>日常礼仪中被忽略的小事</h3>
+          <p>电梯、排队、点餐、致谢等日常场景中的细节，往往最能体现一个人的修养习惯。</p>
+          <div class="tags"><span>日常</span><span>礼仪</span><span>细节</span></div>
+        </article>
+        <article class="topic">
+          <span class="pill">理性讨论</span>
+          <h3>如何看待“绅士”一词的现代含义</h3>
+          <p>探讨传统绅士观念与当代平等意识之间的关系，注意避免刻板印象与性别偏见。</p>
+          <div class="tags"><span>文化</span><span>观念</span><span>讨论</span></div>
+        </article>
+        <article class="topic">
+          <span class="pill">社区共建</span>
+          <h3>你希望社区增加哪些版块</h3>
+          <p>围绕社区建设提出建议，说明需求场景与预期效果，便于管理者评估可行性。</p>
+          <div class="tags"><span>建议</span><span>共建</span><span>反馈</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 加入方式 -->
+  <section class="join" id="join">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">JOIN</span>
+        <h2>参与流程：从旁观到融入</h2>
+        <p>
+          不同平台的注册与审核方式各不相同，但参与节奏大体相似。按下面的顺序推进，
+          通常能更快适应社区氛围，也更少踩到规则红线。
+        </p>
+      </div>
+      <div class="steps">
+        <article class="step">
+          <h3>阅读规则</h3>
+          <p>先看公约与置顶说明，了解禁止事项、发帖规范与举报渠道，这是最省时间的一步。</p>
+        </article>
+        <article class="step">
+          <h3>完善资料</h3>
+          <p>填写简洁真实的个人介绍，说明兴趣方向，避免在公开资料中留下联系方式等敏感信息。</p>
+        </article>
+        <article class="step">
+          <h3>参与讨论</h3>
+          <p>从回复他人话题开始，比直接开新帖更容易被接纳，也能更快熟悉社区的表达习惯。</p>
+        </article>
+        <article class="step">
+          <h3>持续输出</h3>
+          <p>稳定分享有价值的内容，逐步建立自己的信誉。长期来看，质量比数量更能赢得尊重。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">FAQ</span>
+        <h2>常见问题解答</h2>
+        <p>以下问题来自新成员最常提出的疑问，答案以通用情况为准，具体规则请以所在平台的实际说明为准。</p>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>绅士同盟是一个官方组织吗？</summary>
+          <div class="answer">
+            通常不是。这个词更多被用作兴趣社区、群组或内容栏目的名称，用来表达一种交流氛围与价值取向。
+            不同平台使用同一名称时，其规则、成员和内容可能完全不同，参与前建议先了解该平台的具体说明。
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>加入需要付费吗？</summary>
+          <div class="answer">
+            正规的兴趣交流社区一般以免费参与为主，可能通过自愿方式支持运营。若遇到强制付费、承诺内部资源、
+            要求私下转账等情况，应保持警惕并谨慎核实，避免财产损失。
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>新人发帖容易被冷落吗？</summary>
+          <div class="answer">
+            内容质量比身份更重要。把问题写清楚、说明背景、表达自己的思考，通常更容易得到回应。
+            相反，只有一句“求带”“有人吗”的帖子，往往难以引发讨论。
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>讨论中出现分歧怎么办？</summary>
+          <div class="answer">
+            先确认双方是否在讨论同一件事，再补充事实与依据。如果发现对方并不想交流，可以选择结束对话。
+            必要时通过站务渠道反馈，而不是在公开版面持续争吵。
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>线下活动可以放心参加吗？</summary>
+          <div class="answer">
+            需要自行判断。建议优先选择公开场所举办、有明确组织方与活动说明的聚会，
+            提前告知亲友行程，不单独前往陌生私密场所，也不携带大量现金与贵重物品。
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>怎样才算符合“绅士”的表达方式？</summary>
+          <div class="answer">
+            可以概括为几点：说事实、讲依据、留余地、不越界。既不刻意讨好，也不以强势压人，
+            在表达自己观点的同时，尊重他人不同的选择。
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h3>绅士同盟</h3>
+        <p>
+          一个以礼仪修养与兴趣交流为主题的参考页面，帮助新成员理解相关概念、参与方式与注意事项。
+          内容以通用经验整理为主，不构成对任何具体平台的官方说明。
+        </p>
+      </div>
+      <div>
+        <h3>内容导航</h3>
+        <ul>
+          <li><a href="#concept">概念解读</a></li>
+          <li><a href="#boards">版块导航</a></li>
+          <li><a href="#etiquette">礼仪公约</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>参与指引</h3>
+        <ul>
+          <li><a href="#topics">话题广场</a></li>
+          <li><a href="#join">加入方式</a></li>
+          <li><a href="#faq">常见问题</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>安全提醒</h3>
+        <ul>
+          <li>保护个人隐私信息</li>
+          <li>警惕付费与转账话术</li>
+          <li>线下活动注意安全</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 绅士同盟 · 兴趣交流参考页</span>
+      <span>理性表达 · 尊重他人 · 自我约束</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var links = document.querySelectorAll('.main-nav a[href^="#"]');
+  links.forEach(function(link){
+    link.addEventListener('click', function(e){
+      var id = this.getAttribute('href');
+      var target = document.querySelector(id);
+      if(target){
+        e.preventDefault();
+        var top = target.getBoundingClientRect().top + window.pageYOffset - 80;
+        window.scrollTo({top: top, behavior: 'smooth'});
+      }
+    });
+  });
+})();
+</script>
+
+</body>
+  </html>
